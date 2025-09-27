@@ -1,0 +1,227 @@
+Activity - 1
+
+man ls -b
+Description: Print non-graphic characters in octal notation (\nnn).
+(sai㉿kali)-[~]
+└─$ ls -b
+Desktop  Documents  Downloads  hash.txt  hello\040world.txt
+Remarks: Non-printable characters (like space) appear as \nnn format.
+
+man ls -c
+Description: Sort files by ctime (change time). In long format (-l), shows ctime instead of mtime.
+(sai㉿kali)-[~]
+└─$ ls -c
+hi  Downloads  hash.txt  hellooo.txt  Desktop
+Remarks: Files are sorted by status change time, not modification.
+
+man ls -d
+Description: Show directory entry itself, not its contents.
+(sai㉿kali)-[~]
+└─$ ls -ld Desktop
+drwxr-xr-x  2 tanveesh users 4096 Aug 23 15:20 Desktop
+Remarks: Instead of listing inside Desktop, it shows info of Desktop itself.
+
+man ls -f
+Description: List files without sorting, disables color/format.
+(sai㉿kali)-[~]
+└─$ ls -f
+Desktop  Documents  Downloads  hash.txt
+Remarks: Files appear unsorted, faster listing.
+
+man ls -g
+Description: Like -l, but hide owner field.
+(sai㉿kali)-[~]
+└─$ ls -g
+drwxr-xr-x   2   4096 Aug 23 15:20 Desktop
+Remarks: Owner name column is hidden.
+
+man ls -h
+Description: With -l, show human readable sizes (KB, MB).
+(sai㉿kali)-[~]
+└─$ ls -lh
+-rw-r--r--  1 tanveesh users 1.5K Aug 23 15:30 hash.txt
+Remarks: File size is shown in KB/MB instead of bytes.
+
+man ls -i
+Description: Print inode numbers of files.
+(sai㉿kali)-[~]
+└─$ ls -i
+12345 Desktop  23456 Documents  34567 Downloads
+Remarks: Each file has a unique inode number.
+
+man ls -l
+Description: Long listing with permissions, owner, group, size, date.
+(sai㉿kali)-[~]
+└─$ ls -l
+-rw-r--r--  1 tanveesh users 1536 Aug 23 15:30 hash.txt
+Remarks: Detailed file info.
+
+man ls -m
+Description: List files comma-separated.
+(sai㉿kali)-[~]
+└─$ ls -m
+Desktop, Documents, Downloads, hash.txt, hellooo.txt
+Remarks: Easier to read in one line.
+
+man ls -n
+Description: Like -l but show UID/GID numbers.
+(sai㉿kali)-[~]
+└─$ ls -n
+-rw-r--r--  1 1000 1000 1536 Aug 23 15:30 hash.txt
+Remarks: Instead of names, numbers for user/group.
+
+man ls -o
+Description: Like -l but omit group field.
+(sai㉿kali)-[~]
+└─$ ls -o
+-rw-r--r--  1 tanveesh 1536 Aug 23 15:30 hash.txt
+Remarks: Group info hidden.
+
+man ls -p
+Description: Append '/' after directories.
+(sai㉿kali)-[~]
+└─$ ls -p
+Desktop/  Documents/  hash.txt
+Remarks: Helps differentiate dirs from files.
+
+man ls -q
+Description: Non-printable chars shown as '?'.
+(sai㉿kali)-[~]
+└─$ ls -q
+Desktop  hello?world.txt
+Remarks: Safer display when filenames have weird chars.
+
+man ls -r
+Description: Reverse sort order.
+(sai㉿kali)-[~]
+└─$ ls -r
+hellooo.txt  hash.txt  Downloads  Documents  Desktop
+Remarks: Order reversed.
+
+man ls -s
+Description: Show size in blocks.
+(sai㉿kali)-[~]
+└─$ ls -s
+4 Desktop  4 Documents  8 hash.txt
+Remarks: Number at start = disk blocks used.
+
+man ls -t
+Description: Sort by modification time.
+(sai㉿kali)-[~]
+└─$ ls -t
+hash.txt  hellooo.txt  Downloads  Desktop
+Remarks: Newest file shown first.
+
+man ls -u
+Description: Sort/show access time.
+(sai㉿kali)-[~]
+└─$ ls -u
+hellooo.txt  Desktop  Downloads
+Remarks: Order depends on last access, not modification.
+
+man ls -v
+Description: Sort by version numbers in names.
+(sai㉿kali)-[~]
+└─$ ls -v
+file1  file2  file10
+Remarks: Natural sort order for numbers.
+
+man ls -x
+Description: List entries by lines, not columns.
+(sai㉿kali)-[~]
+└─$ ls -x
+Desktop  Documents  Downloads  hash.txt
+Remarks: Files arranged across rows.
+
+man ls -z
+Description: Show SELinux security context.
+(sai㉿kali)-[~]
+└─$ ls -Z
+unconfined_u:object_r:user_home_t:s0 hash.txt
+Remarks: Displays security attributes.
+
+
+whoami
+Description: Shows the currently logged in username.
+(sai㉿kali)-[~]
+└─$ whoami
+sai
+Remarks: Confirms your Linux username.
+
+pwd
+Description: Print working directory.
+(sai㉿kali)-[~]
+└─$ pwd
+/home/sai
+Remarks: Shows your current directory.
+
+cd
+Description: Change directory.
+(sai㉿kali)-[~]
+└─$ cd Documents
+Remarks: Switches to Documents folder.
+
+cd /
+Description: Change to root directory.
+(sai㉿kali)-[~]
+└─$ cd /
+Remarks: Goes to the root of filesystem.
+
+cd ..
+Description: Move one directory up.
+(sai㉿kali)-[~]
+└─$ cd ..
+Remarks: Used for going to parent directory.
+
+cd <path>
+Description: Change to a specified path.
+(sai㉿kali)-[~]
+└─$ cd /var/log
+Remarks: Jumps directly to given path.
+
+
+tree -l -L 1
+Description: Show directory structure 1 level deep.
+(sai㉿kali)-[~]
+└─$ tree -l -L 1
+.
+├── Desktop
+├── Documents
+└── Downloads
+Remarks: Only top-level directories visible.
+
+tree -l -L 2
+Description: Show directory structure 2 levels deep.
+(sai㉿kali)-[~]
+└─$ tree -l -L 2
+.
+├── Desktop
+│   └── file.txt
+├── Documents
+│   └── notes.txt
+└── Downloads
+Remarks: Shows two levels of directory hierarchy.
+
+tree -l -L 3
+Description: Show directory structure 3 levels deep.
+(sai㉿kali)-[~]
+└─$ tree -l -L 3
+.
+├── Desktop
+│   └── subdir
+│       └── file.txt
+├── Documents
+│   └── notes
+│       └── book.pdf
+└── Downloads
+Remarks: Expands three directory levels.
+
+tree /var/log/apt -La 1
+Description: Show hidden files too, only 1 level in /var/log/apt.
+(sai㉿kali)-[~]
+└─$ tree /var/log/apt -La 1
+/var/log/apt
+├── history.log
+├── term.log
+└── .hiddenfile
+Remarks: Hidden files are included.
