@@ -1,0 +1,77 @@
+Activity - 2
+
+man tree -a
+Description: List all files including hidden ones.
+(sai㉿kali)-[~]
+└─$ tree -a
+.
+├── .hiddenfile
+├── file1.txt
+└── dir1
+Remarks: Useful to see config/hidden files.
+
+man tree -d
+Description: Show only directories.
+(sai㉿kali)-[~]
+└─$ tree -d
+.
+├── Desktop
+├── Documents
+└── Downloads
+Remarks: Filters out files, shows only directories.
+
+man tree -u
+Description: Show file owner usernames.
+(sai㉿kali)-[~]
+└─$ tree -u
+.
+[drwxr-xr-x tanveesh]  Desktop
+[drwxr-xr-x tanveesh]  Documents
+Remarks: Adds owner info.
+
+man tree -p
+Description: Show file permissions in rwx style.
+(sai㉿kali)-[~]
+└─$ tree -p
+.
+[drwxr-xr-x]  Desktop
+[-rw-r--r--]  hash.txt
+Remarks: Displays permissions next to files.
+
+
+ifconfig
+Description: Show network interface configuration (IP, MAC).
+(sai㉿kali)-[~]
+└─$ ifconfig
+eth0: inet 192.168.1.5  netmask 255.255.255.0
+Remarks: Displays network details.
+
+ping google.com
+Description: Test connectivity by sending ICMP packets.
+(sai㉿kali)-[~]
+└─$ ping -c 2 google.com
+PING google.com (142.250.183.46) 56(84) bytes of data.
+Remarks: Confirms connection & packet loss info.
+
+traceroute google.com
+Description: Trace the route taken by packets to a host.
+(sai㉿kali)-[~]
+└─$ traceroute google.com
+1  router.local (192.168.1.1)
+2  isp.gateway (10.0.0.1)
+Remarks: Shows each hop from your PC to destination.
+
+nmap 192.168.1.1
+Description: Scan open ports and services.
+(sai㉿kali)-[~]
+└─$ nmap 192.168.1.1
+PORT   STATE SERVICE
+22/tcp open  ssh
+80/tcp open  http
+Remarks: Useful for security auditing.
+
+mkdir newfolder
+Description: Create new directory.
+(sai㉿kali)-[~]
+└─$ mkdir newfolder
+Remarks: Makes an empty directory.
